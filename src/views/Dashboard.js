@@ -22,7 +22,6 @@ function Dashboard() {
             <Card>
               <Card.Header>
                 <Card.Title as="h4">Your Weekly Summary</Card.Title>
-                <p className="card-category">24 Hours performance</p>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartHours">

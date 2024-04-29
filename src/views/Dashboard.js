@@ -72,10 +72,7 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Click <i className="fas fa-circle text-warning"></i>
-                  Click Second Time
+                  <i className="fas fa-circle text-info"></i> Focus Time
                 </div>
                 <hr></hr>
                 <div className="stats">
@@ -88,8 +85,8 @@ function Dashboard() {
           <Col md="4">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
+                <Card.Title as="h4">Commitment Statistic</Card.Title>
+                <p className="card-category">Time Locked in Vs Time off</p>
               </Card.Header>
               <Card.Body>
                 <div
@@ -98,17 +95,16 @@ function Dashboard() {
                 >
                   <ChartistGraph
                     data={{
-                      labels: ["40%", "20%", "40%"],
-                      series: [40, 20, 40],
+                      labels: ["40%", "60%",],
+                      series: [40, 60],
                     }}
                     type="Pie"
                   />
                 </div>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
+                  Lock In <i className="fas fa-circle text-danger"></i>
+                  Time off
                 </div>
                 <hr></hr>
                 <div className="stats">
@@ -123,56 +119,26 @@ function Dashboard() {
           <Col md="6">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">2017 Sales</Card.Title>
-                <p className="card-category">All products including Taxes</p>
+                <Card.Title as="h4">Monthly Performance</Card.Title>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartActivity">
                   <ChartistGraph
                     data={{
                       labels: [
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "Mai",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                        "Nov",
-                        "Dec",
+                        '1st Week',
+                        '2nd Week',
+                        '3rd Week',
+                        '4th Week'
                       ],
                       series: [
                         [
-                          542,
-                          443,
-                          320,
-                          780,
-                          553,
-                          453,
-                          326,
-                          434,
-                          568,
-                          610,
-                          756,
-                          895,
+                        '36',
+                        '40',
+                        '50',
+                        '20'
                         ],
-                        [
-                          412,
-                          243,
-                          280,
-                          580,
-                          453,
-                          353,
-                          300,
-                          364,
-                          368,
-                          410,
-                          636,
-                          695,
-                        ],
+                      
                       ],
                     }}
                     type="Bar"
@@ -201,9 +167,8 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Tesla Model S <i className="fas fa-circle text-danger"></i>
-                  BMW 5 Series
+                
+                 
                 </div>
                 <hr></hr>
                 <div className="stats">

@@ -104,8 +104,12 @@ function Dashboard() {
     const updatedWeeklyData = [...weeklyData];
 
     const timeSpentToday = timer;
-    setDailyTime([...dailyTime, timeSpentToday]);
-  
+    const updatedDailyTime = [...dailyTime, timeSpentToday];
+    
+    if (updatedDailyTime.length === 8) {
+      updatedDailyTime.splice(0, 7); // Remove the first 7 days
+    }
+
     updatedWeeklyData.push([completedCount]);
 
     if (updatedWeeklyData.length === 8) {
@@ -113,7 +117,7 @@ function Dashboard() {
     } else {
       setWeeklyData(updatedWeeklyData);
     }
-
+    setDailyTime(updatedDailyTime);
     const resetTasks = tasks.map(task => ({ ...task, checked: false }));
     setTasks(resetTasks);
     clearInterval(intervalId);
